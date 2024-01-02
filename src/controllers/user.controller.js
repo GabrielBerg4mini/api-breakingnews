@@ -10,10 +10,6 @@ const create = async (req, res) => {
 
     const user = await userService.createService(req.body)
 
-    /*   if (!user) {
-    return res.status(400).send({ message: "Error creating User" })
-  } */
-
     res.status(201).send({
       message: "User created successfully",
       user: {
